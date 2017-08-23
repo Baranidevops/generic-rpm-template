@@ -1,7 +1,7 @@
 {
   "app_name": "rpm_project_name",
   "app_component_name": "",
-  "repo_name": "tgt-{{cookiecutter.app_name | lower | replace(' ', '-')}}{% if cookiecutter.app_component_name %}-{{cookiecutter.app_component_name | lower | replace(' ', '-')}}{% endif %}",
+  "repo_name": "devops-{{cookiecutter.app_name | lower | replace(' ', '-')}}{% if cookiecutter.app_component_name %}-{{cookiecutter.app_component_name | lower | replace(' ', '-')}}{% endif %}",
   "gradle_version": "2.12",
   "rpm_publish_artifactory_url": "https://binrepo.devops.com/artifactory",
   "apply_download_source_plugin": "false",
