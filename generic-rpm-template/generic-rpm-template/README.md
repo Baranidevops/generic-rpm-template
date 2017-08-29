@@ -1,4 +1,4 @@
-# tgt-generic-rpm-template
+# devops-generic-rpm-template
 
 This template uses the [cookiecutter](http://cookiecutter.readthedocs.io/en/latest/index.html) command line utility.
 
@@ -15,10 +15,10 @@ brew install cookiecutter
 ---
 ### 2) Generate your RPM project via cookiecutter (2 options below - PICK EITHER ONE)
 ##### Using the command line prompts to fill in template
-- Run the following command to use the tgt-generic-rpm-template git repo as the template base
+- Run the following command to use the devops-generic-rpm-template git repo as the template base
 **(Note: this will create a new directory in whatever directory you are currently in)**
 ```
-cookiecutter git@git.devops.com:cpe-rpm/tgt-generic-rpm-template.git
+cookiecutter git@git.devops.com:cpe-rpm/devops-generic-rpm-template.git
 ```
 
 - Follow the command line prompts to create your specific rpm project
@@ -31,7 +31,7 @@ cookiecutter git@git.devops.com:cpe-rpm/tgt-generic-rpm-template.git
 - Create a configuration yaml file with the settings of your choice on your local machine (see [sapphire-config-example.yaml](sapphire-config-example.yaml)) as an example.
 **Note: you need to have the ```default_context:``` at the top of the yaml file. See the [advanced usage documentation](https://github.com/audreyr/cookiecutter/blob/9ded8b172929619f1b3a2c1842d37e8beca25f24/docs/advanced_usage.rst) for more help.** Once you have created your config yaml file, run the following command:
 ```
-cookiecutter --no-input --config-file /path/to/config/yaml/file/filename.yaml git@git.devops.com:cpe-rpm/tgt-generic-rpm-template.git
+cookiecutter --no-input --config-file /path/to/config/yaml/file/filename.yaml git@git.devops.com:cpe-rpm/devops-generic-rpm-template.git
 ```
 **Once again, note that this will create your new templated project directory in whatever directory you're currently in.**
 
@@ -44,7 +44,7 @@ You can see all of the available options in the [cookiecutter.json](cookiecutter
 
 ```app_component_name```: Name of the application component. Will be appended to the ```repo_name```. Defaults to an empty string.
 
-```repo_name```: Name of the repository. This is used for the output project directory name as well as the name of the gradle project as seen in the settings.gradle file. Default convention will append a 'tgt-' prefix to the ```app_name``` attribute followed by '-```app_component_name```'and convert all spaces to hyphens. This will set the rootProject.name gradle project property for use throughout the gradle project and it will set the name of the project's root directory - this will also be used as the rpmName.
+```repo_name```: Name of the repository. This is used for the output project directory name as well as the name of the gradle project as seen in the settings.gradle file. Default convention will append a 'devops-' prefix to the ```app_name``` attribute followed by '-```app_component_name```'and convert all spaces to hyphens. This will set the rootProject.name gradle project property for use throughout the gradle project and it will set the name of the project's root directory - this will also be used as the rpmName.
 
 ```gradle_version```: Version of gradle for the gradle wrapper. Defaults to 2.12.
 
