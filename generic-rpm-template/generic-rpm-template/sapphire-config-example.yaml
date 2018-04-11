@@ -1,14 +1,14 @@
 ---
 default_context:
-  app_name: "sapphire"
+  app_name: "firstRpm"
   app_component_name: ""
-  repo_name: "tgt-{{cookiecutter.app_name | lower | replace(' ', '-')}}{% if cookiecutter.app_component_name %}-{{cookiecutter.app_component_name | lower | replace(' ', '-')}}{% endif %}"
+  repo_name: "DevOps-{{cookiecutter.app_name | lower | replace(' ', '-')}}{% if cookiecutter.app_component_name %}-{{cookiecutter.app_component_name | lower | replace(' ', '-')}}{% endif %}"
   gradle_version: "2.12"
-  rpm_publish_artifactory_url: "https://binrepo.devops.com/artifactory"
+  rpm_publish_artifactory_url: "http://35.188.144.12/artifactory"
   apply_download_source_plugin: "true"
   source_artifact_url: "{{cookiecutter.rpm_publish_artifactory_url}}"
   source_artifact_repo: "apps-release-local"
-  source_artifact_path: "com/tgt/prz/sapphire/sapphire/0.0.15"
+  source_artifact_path: "com/cpm/prz/sapphire/sapphire/0.0.15"
   source_artifact_version: "0.0.15"
   source_artifact_name: "sapphire-0.0.15.jar"
   rename_source_artifact: "true"
